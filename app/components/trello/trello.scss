@@ -1,0 +1,40 @@
+.trello-container {
+	padding: 15px 30px;
+}
+.trello-heading {
+	text-align: center;
+	padding: 10px;
+	font-size: 20px;
+}
+.trello-board {
+	border: 1px solid #ccc;
+	.heading {
+		text-align: center;
+		padding: 5px 10px;
+		background: whitesmoke;
+		border-bottom: 1px solid #eae8e8;
+	}
+	.card-section {
+		padding: 0 10px 10px 10px;
+		height: 60vh;
+		overflow: auto;
+	}
+	.card {
+		border: 1px solid #eae8e8;
+		padding: 5px;
+		border-radius: 3px;
+		margin-bottom: 10px;
+		background: white;
+		cursor: move;
+	}
+	.card-add {
+		padding: 10px;
+		textarea {
+			width: 100%;
+			height: 80px;
+			border: 1px solid #eae8e8;
+			padding: 5px;
+			border-radius: 3px;
+		}
+	}
+}

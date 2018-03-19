@@ -1,0 +1,32 @@
+/* app css stylesheet */
+.menu {
+	list-style: none;
+	border-bottom: 0.1em solid black;
+	margin-bottom: 2em;
+	padding: 0 0 0.5em;
+	&:before {
+		content: "[";
+	}
+	&:after {
+		content: "]";
+	}
+	>li {
+		display: inline;
+		+ {
+			li {
+				&:before {
+					content: "|";
+					padding-right: 0.3em;
+				}
+			}
+		}
+	}
+}
+.footer {
+	position: fixed;
+	bottom: 0;
+	background: #ccc;
+	color: white;
+	padding: 5px 30px;
+	width: 100%;
+}

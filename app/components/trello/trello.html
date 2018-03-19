@@ -1,0 +1,32 @@
+<section class="trello-container">
+    <div class="row trello-heading">
+        <div class="col-xs-12">
+            NoBroker Board
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4" ng-repeat="board in boards">
+            <div class=" trello-board">
+                <div class="heading">
+                    {{board.name}}
+                </div>
+                <form class="card-add" name="board_{{board.type}}">
+                    <textarea ng-model="board.newCard" ng-enter="addCard(board.type, board.newCard)"></textarea>
+                </form>
+                <div class="card-section" ng-drop="true" ng-drop-success="onDropComplete($data,$event, board.type)">
+                    <div class="card"
+                         ng-repeat="card in board.cards"
+                         ng-drag="true" ng-drag-data="{card}" ng-drag-success="onDragComplete($data,$event, board.type, $index)" ng-center-anchor="true"
+                    >
+                        <div class="card-description">
+                            {{card.description}}
+                        </div>
+                        <div class="card-actions">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
