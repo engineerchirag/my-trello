@@ -29,6 +29,10 @@ this server is:
 npm start
 ```
 
+##Sample preview
+
+![alt text](https://raw.githubusercontent.com/chirag-goel/my-trello/master/app/assets/img/my-trello.png)
+
 ## Contact
 
 For more information please contact http://www.chirag-goel.in.
