@@ -1,40 +1,55 @@
+$board-bg: #e2e4e6;
+$card-border: #eae8e8;
+
 .trello-container {
 	padding: 15px 30px;
 }
 .trello-heading {
 	text-align: center;
-	padding: 10px;
+	padding: 10px 0 25px 0;
 	font-size: 20px;
+	color: #f6f6f6;
 }
 .trello-board {
-	border: 1px solid #ccc;
+	background-color: $board-bg;
+	border-radius: 3px;
 	.heading {
 		text-align: center;
-		padding: 5px 10px;
-		background: whitesmoke;
-		border-bottom: 1px solid #eae8e8;
+		font-weight: bold;
+		padding: 10px 0 5px 0;
 	}
 	.card-section {
 		padding: 0 10px 10px 10px;
 		height: 60vh;
-		overflow: auto;
+		overflow-y: auto;
 	}
 	.card {
-		border: 1px solid #eae8e8;
+		border: 1px solid $card-border;
 		padding: 5px;
 		border-radius: 3px;
 		margin-bottom: 10px;
 		background: white;
 		cursor: move;
+		&.dragged-card{
+			display: none;
+		}
 	}
 	.card-add {
 		padding: 10px;
 		textarea {
 			width: 100%;
-			height: 80px;
+			height: 60px;
 			border: 1px solid #eae8e8;
 			padding: 5px;
 			border-radius: 3px;
 		}
 	}
+}
+
+.dragging-card{
+	position: fixed;
+	z-index: 1111;
+	background-color: white;
+	border: 1px solid $card-border;
+	padding: 5px 10px;
 }

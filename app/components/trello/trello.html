@@ -10,13 +10,11 @@
                 <div class="heading">
                     {{board.name}}
                 </div>
-                <form class="card-add" name="board_{{board.type}}">
-                    <textarea ng-model="board.newCard" ng-enter="addCard(board.type, board.newCard)"></textarea>
-                </form>
                 <div class="card-section" ng-drop="true" ng-drop-success="onDropComplete($data,$event, board.type)">
                     <div class="card"
                          ng-repeat="card in board.cards"
-                         ng-drag="true" ng-drag-data="{card}" ng-drag-success="onDragComplete($data,$event, board.type, $index)" ng-center-anchor="true"
+                         ng-drag="true" ng-drag-data="{card}" ng-drag-start="onDragStart($data,$event, board.type, $index)" ng-drag-success="onDragComplete($data,$event, board.type, $index)" ng-center-anchor="true"
+                         ng-class="{'dragged-card': card.dragged}"
                     >
                         <div class="card-description">
                             {{card.description}}
@@ -26,7 +24,13 @@
                         </div>
                     </div>
                 </div>
+                <form class="card-add" name="board_{{board.type}}">
+                    <textarea ng-model="board.newCard" ng-enter="addCard(board.type, board.newCard)" placeholder="Create a new card and hit enter ..."></textarea>
+                </form>
             </div>
         </div>
     </div>
+    <div ng-drag-clone="" class="dragging-card">
+      {{clonedData.card.description}}
+  </div>
 </section>

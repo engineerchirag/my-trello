@@ -12,10 +12,15 @@ angular.module('myApp.cardLocalService', [])
                 return cards.splice(index, 1);
             },
             getUpdatedCardsAfterAdd: function (cards, newCard){
+                newCard.dragged = false;
                 return cards.unshift(newCard);
             },
             getBoardIndex: function (boards, type){
                 return  _.findIndex(boards, {"type": type});
+            },
+            addDragEffect: function(cards, index){
+                cards[index].dragged = true;
+                return cards;
             }
         };
     }]);

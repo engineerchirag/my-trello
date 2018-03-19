@@ -1,4 +1,7 @@
 /* app css stylesheet */
+body{
+	background-color: rgb(0, 121, 191);
+}
 .menu {
 	list-style: none;
 	border-bottom: 0.1em solid black;
@@ -25,8 +28,8 @@
 .footer {
 	position: fixed;
 	bottom: 0;
-	background: #ccc;
-	color: white;
+	background: #026aa7;
+	color: #f6f6f6;
 	padding: 5px 30px;
 	width: 100%;
 }

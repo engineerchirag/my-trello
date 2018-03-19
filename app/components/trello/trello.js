@@ -43,11 +43,15 @@ angular.module('myApp.view1', ['ngRoute'])
         $in.local.Card.getUpdatedCardsAfterAdd($scope.boards[getBoardIndex (type)].cards, newCard);
     };
 
-    $scope.onDragComplete=function(data,evt, type, index){
+    $scope.onDragStart = function(data,evt, type, index){
+        $in.local.Card.addDragEffect($scope.boards[getBoardIndex (type)].cards, index);
+    };
+
+    $scope.onDragComplete = function(data,evt, type, index){
         $in.local.Card.getUpdatedCardsAfterRemove($scope.boards[getBoardIndex (type)].cards, index);
     };
 
-    $scope.onDropComplete=function(data,evt, type, index){
+    $scope.onDropComplete = function(data,evt, type, index){
         $in.local.Card.getUpdatedCardsAfterAdd($scope.boards[getBoardIndex (type)].cards, data.card);
     };
 
