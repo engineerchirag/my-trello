@@ -75,6 +75,7 @@ $text-blue: #327dbd;
              height: 25px;
              display: inline-block;
              vertical-align: middle;
+             margin-right: 15px;
            }
         }
       }
@@ -105,19 +106,19 @@ $text-blue: #327dbd;
             background-color: $text-red-light;
           }
           &:nth-child(1) .icon{
-            @include liIcon(60);
+            @include liIcon(587);
           }
           &:nth-child(2) .icon{
-            @include liIcon(120);
+            @include liIcon(97);
           }
           &:nth-child(3) .icon{
-            @include liIcon(180);
+            @include liIcon(370);
           }
           &:nth-child(4) .icon{
-            @include liIcon(240);
+            @include liIcon(210);
           }
           &:nth-child(5) .icon{
-            @include liIcon(320);
+            @include liIcon(587);
           }
         }
       }
@@ -136,19 +137,28 @@ $text-blue: #327dbd;
       .content-choices{
         .content-choice{
           &:nth-child(1) .icon{
-            @include liIcon(60);
+            @include liIcon(587);
           }
           &:nth-child(2) .icon{
-            @include liIcon(120);
+            @include liIcon(97);
           }
           &:nth-child(3) .icon{
-            @include liIcon(180);
+            @include liIcon(370);
           }
           &:nth-child(4) .icon{
-            @include liIcon(240);
+            @include liIcon(210);
           }
           &:nth-child(5) .icon{
-            @include liIcon(320);
+            @include liIcon(587);
+          }
+          &:nth-child(6) .icon{
+            @include liIcon(370);
+          }
+          &:nth-child(7) .icon{
+            @include liIcon(210);
+          }
+          &:nth-child(8) .icon{
+            @include liIcon(15);
           }
           &:nth-child(even){
             background-color: $text-blue-light;
