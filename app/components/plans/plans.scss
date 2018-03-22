@@ -25,11 +25,11 @@ $text-blue: #327dbd;
 
 
 
-@mixin liIcon($vp) {
-  &:nth-child(#{$i}) .icon{
+@mixin liIcon($vh) {
+  & {
     color: red !important;
     background-image: url('/assets/img/owner_plan_icons.png');
-    background-position: -15px #{$vp}px;
+    background-position: -15px #{$vh}px;;
   }
 }
 
@@ -70,7 +70,6 @@ $text-blue: #327dbd;
           line-height: 35px;
           list-style: none;
           padding: 0 10px;
-          @include liIcon;
            .icon {
              width: 25px;
              height: 25px;
@@ -105,20 +104,20 @@ $text-blue: #327dbd;
           &:nth-child(even){
             background-color: $text-red-light;
           }
-          .icon:nth-child(1){
-            @include liIcon('15px');
+          &:nth-child(1) .icon{
+            @include liIcon(60);
           }
-          .icon:nth-child(2){
-            @include liIcon('75px');
+          &:nth-child(2) .icon{
+            @include liIcon(120);
           }
-          .icon:nth-child(3){
-            @include liIcon('125px');
+          &:nth-child(3) .icon{
+            @include liIcon(180);
           }
-          .icon:nth-child(4){
-            @include liIcon('205px');
+          &:nth-child(4) .icon{
+            @include liIcon(240);
           }
-          .icon:nth-child(5){
-            @include liIcon('255px');
+          &:nth-child(5) .icon{
+            @include liIcon(320);
           }
         }
       }
@@ -136,7 +135,21 @@ $text-blue: #327dbd;
     .content{
       .content-choices{
         .content-choice{
-          @include liIcon;
+          &:nth-child(1) .icon{
+            @include liIcon(60);
+          }
+          &:nth-child(2) .icon{
+            @include liIcon(120);
+          }
+          &:nth-child(3) .icon{
+            @include liIcon(180);
+          }
+          &:nth-child(4) .icon{
+            @include liIcon(240);
+          }
+          &:nth-child(5) .icon{
+            @include liIcon(320);
+          }
           &:nth-child(even){
             background-color: $text-blue-light;
           }
