@@ -1,0 +1,152 @@
+
+//Color scheme
+
+$text-gray: gray;
+$text-red: red;
+$text-red-light: #fff5f5;
+$text-blue-light: #e7f4ff;
+$text-blue: #327dbd;
+
+
+//Helper properties
+.f10{ font-size: 10px; }
+.f12{ font-size: 12px; }
+.f17{ font-size: 17px; }
+.f20{ font-size: 20px; }
+.f30{ font-size: 30px; }
+.f25{ font-size: 25px; }
+.m-t-30{ margin-top: 30px; }
+.text-bold{ font-weight: bold; }
+.p-15{ padding: 15px; }
+.text-center{ text-align: center; }
+.text-red {color: $text-red;}
+.text-blue {color: $text-blue;}
+.in-block { display: inline-block;}
+
+
+
+@mixin liIcon($vp) {
+  &:nth-child(#{$i}) .icon{
+    color: red !important;
+    background-image: url('/assets/img/owner_plan_icons.png');
+    background-position: -15px #{$vp}px;
+  }
+}
+
+
+//Plan page properties
+.plan-container{
+  section{
+  }
+  .main-heading{
+    .heading{
+
+    }
+    .sub-heading{
+      color: $text-gray;
+    }
+  }
+  .plan-section{
+        border: 1px solid #d8d7d7;
+        border-radius: 8px;
+        box-shadow: 4px 4px 10px #f3f1f1;
+        min-height: 500px;
+        position: relative;
+        overflow: hidden;
+    .heading{
+        margin: 0;
+        padding: 10px;
+        color: white;
+    }
+    .content{
+      .content-title{
+
+      }
+      .content-choices{
+        margin: 0;
+        padding: 0;
+        padding-top: 20px;
+        .content-choice{
+          line-height: 35px;
+          list-style: none;
+          padding: 0 10px;
+          @include liIcon;
+           .icon {
+             width: 25px;
+             height: 25px;
+             display: inline-block;
+             vertical-align: middle;
+           }
+        }
+      }
+    }
+    .action-button{
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      width: 100%;
+      padding: 10px 15px;
+      button{
+        width: 100%;
+        color: white;
+        border-radius: 0;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .plan-section.plan-1{
+    .heading{
+        background-color: #da4444;
+    }
+    .content{
+      .content-choices{
+        .content-choice{
+          &:nth-child(even){
+            background-color: $text-red-light;
+          }
+          .icon:nth-child(1){
+            @include liIcon('15px');
+          }
+          .icon:nth-child(2){
+            @include liIcon('75px');
+          }
+          .icon:nth-child(3){
+            @include liIcon('125px');
+          }
+          .icon:nth-child(4){
+            @include liIcon('205px');
+          }
+          .icon:nth-child(5){
+            @include liIcon('255px');
+          }
+        }
+      }
+    }
+    .action-button{
+      button{
+        background-color: $text-red;
+      }
+    }
+  }
+  .plan-section.plan-2{
+    .heading{
+        background-color: #327dbd;
+    }
+    .content{
+      .content-choices{
+        .content-choice{
+          @include liIcon;
+          &:nth-child(even){
+            background-color: $text-blue-light;
+          }
+        }
+      }
+    }
+    .action-button{
+      button{
+        background-color: $text-blue;
+      }
+    }
+  }
+}

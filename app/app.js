@@ -10,7 +10,8 @@ angular.module('myApp', [
   "myApp.cardRemoteService",
   "ngDraggable",
   "myApp.enter",
-   "myApp.api"
+   "myApp.api",
+    'myApp.plans'
 ]).
 run(['$in', function($in){
   $in.activate();
